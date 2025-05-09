@@ -19,8 +19,34 @@ public class StackImplementation {
         }
     }
 
+    boolean isEmpty() {
+        if(top == -1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    void pop() {
+        if(isEmpty()) {
+            System.out.println("Underflow state");
+        } else {
+            System.out.println(stack[top] + " popped");
+            top--;
+        }
+    }
+
     public static void main(String[] args) {
         StackImplementation s = new StackImplementation(5);
         s.push(10);
+        s.push(20);
+        s.push(30);
+        s.push(40);
+        s.push(50);
+        s.push(60);
+
+        s.pop();
+        s.pop();
+        s.pop();
     }
 }
