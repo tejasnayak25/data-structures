@@ -36,6 +36,14 @@ public class StackImplementation {
         }
     }
 
+    int topElement() {
+        return stack[top];
+    }
+
+    int sizeOf() {
+        return top+1;
+    }
+
     public static void main(String[] args) {
         StackImplementation s = new StackImplementation(5);
         s.push(10);
@@ -48,5 +56,7 @@ public class StackImplementation {
         s.pop();
         s.pop();
         s.pop();
+
+        System.out.println(s.topElement() + " " + s.sizeOf());
     }
 }
